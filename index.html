@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>FROSCHLAUT - Offizielle Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #111;
+      color: #eee;
+    }
+    header {
+      background: #222;
+      padding: 30px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: #0f0;
+      text-shadow: 0 0 15px #0f0;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #eee;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #0f0;
+    }
+    section {
+      padding: 30px;
+      text-align: center;
+    }
+    section h2 {
+      color: #0f0;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    }
+    .gallery img {
+      max-width: 90%;
+      height: auto;
+      border: 4px solid #0f0;
+    }
+    audio {
+      margin-top: 20px;
+      width: 80%;
+    }
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FROSCHLAUT</h1>
+    <p>Offizielle Website der Rockband</p>
+  </header>
+
+  <nav>
+    <a href="#fotos">Fotos</a>
+    <a href="#musik">Musik</a>
+  </nav>
+
+  <section id="fotos">
+    <h2>Fotos</h2>
+    <div class="gallery">
+      <img src="img/HalloZusammen.png" alt="Bandfoto FROSCHLAUT">
+    </div>
+  </section>
+
+  <section id="musik">
+    <h2>Musik</h2>
+    <p>Hört unser neues Lied "Hallo zusammen"</p>
+    <audio controls>
+      <source src="music/FROSCHLAUT - Hallo zusammen.mp3" type="audio/mpeg">
+      Dein Browser unterstützt das Audio-Element nicht.
+    </audio>
+
+    <p>Und hier unser Song "Die Schattenseele"</p>
+    <audio controls>
+      <source src="music/FROSCHLAUT - Die Schattenseele.mp3" type="audio/mpeg">
+      Dein Browser unterstützt das Audio-Element nicht.
+    </audio>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FROSCHLAUT – Rock aus Leidenschaft</p>
+  </footer>
+</body>
+</html>
