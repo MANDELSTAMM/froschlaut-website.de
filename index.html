@@ -87,43 +87,43 @@
     <h2>Musik</h2>
 
     <p>Hört unser neues Lied "Hallo zusammen"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Hallo zusammen.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Und hier unser Song "Die Schattenseele"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Die Schattenseele.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Und unser Lied "Lacheln"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Lacheln.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Und neu: "Licht in der Ferne"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Licht in der Ferne.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Und neu: "Denk mit dem Kopf"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Denk mit dem Kopf.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Und unser neuer Song "ToBeOrNotToBe"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - ToBeOrNotToBe.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
     <p>Ganz frisch: "Zitrone und Mut"</p>
-    <audio controls>
+    <audio controls controlsList="nodownload">
       <source src="music/FROSCHLAUT - Zitrone und Mut.mp3" type="audio/mpeg">
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
@@ -133,5 +133,17 @@
   <footer>
     <p>&copy; 2025 FROSCHLAUT – Rock aus Leidenschaft</p>
   </footer>
+
+  <script>
+    // Skript zum Stoppen aller Audios außer dem, was gerade abgespielt wird
+    const audios = document.querySelectorAll('#musik audio');
+    audios.forEach(audio => {
+      audio.addEventListener('play', () => {
+        audios.forEach(a => {
+          if(a !== audio) a.pause();
+        });
+      });
+    });
+  </script>
 </body>
 </html>
