@@ -158,6 +158,12 @@
       Dein Browser unterstützt das Audio-Element nicht.
     </audio>
 
+    <p>Neu: "WieKind"</p>
+    <audio controls controlsList="nodownload">
+      <source src="music/FROSCHLAUT - WieKind.mp3" type="audio/mpeg">
+      Dein Browser unterstützt das Audio-Element nicht.
+    </audio>
+
   </section>
 
   <footer>
@@ -165,7 +171,6 @@
   </footer>
 
   <script>
-    // Skript zum Stoppen aller Audios außer dem, was gerade abgespielt wird
     const audios = document.querySelectorAll('#musik audio');
     audios.forEach(audio => {
       audio.addEventListener('play', () => {
