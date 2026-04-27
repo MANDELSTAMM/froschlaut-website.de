@@ -1,190 +1,245 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>FROSCHLAUT - Offizielle Website</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #111;
-      color: #eee;
-    }
-    header {
-      background: #222;
-      padding: 30px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      color: #0f0;
-      text-shadow: 0 0 15px #0f0;
-    }
-    nav {
-      background: #333;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #eee;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      color: #0f0;
-    }
-    section {
-      padding: 30px;
-      text-align: center;
-    }
-    section h2 {
-      color: #0f0;
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
-    }
-    .gallery img {
-      max-width: 90%;
-      height: auto;
-      border: 4px solid #0f0;
-    }
-    audio {
-      margin-top: 20px;
-      width: 80%;
-    }
-    footer {
-      background: #222;
-      color: #aaa;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>FROSCHLAUT</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+/* HEADER */
+header {
+  background: #222;
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3em;
+  color: #0f0;
+  text-shadow: 0 0 15px #0f0;
+}
+
+/* NAV */
+nav {
+  background: #333;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: #eee;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #0f0;
+}
+
+/* SECTIONS */
+section {
+  padding: 30px;
+  text-align: center;
+}
+
+h2 {
+  color: #0f0;
+  font-size: 2.2em;
+  text-shadow: 0 0 10px #0f0;
+}
+
+/* IMAGE */
+.gallery img {
+  max-width: 90%;
+  border: 4px solid #0f0;
+  margin-top: 15px;
+}
+
+/* MUSIC LIST */
+.music-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* PLAYER */
+.player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #1a1a1a;
+  border: 1px solid #0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.track-title {
+  width: 220px;
+  text-align: left;
+  font-size: 13px;
+  color: #0f0;
+  text-transform: uppercase;
+}
+
+.play-btn {
+  background: transparent;
+  border: 1px solid #0f0;
+  color: #0f0;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.play-btn:hover {
+  background: #0f0;
+  color: #000;
+}
+
+/* PINK PROGRESS */
+.progress {
+  flex: 1;
+  height: 8px;
+  background: #000;
+  border: 1px solid #ff4fd8;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff4fd8, #ff00aa);
+  box-shadow: 0 0 10px rgba(255, 0, 170, 0.6);
+}
+
+/* VOLUME */
+.volume {
+  width: 90px;
+}
+
+audio {
+  display: none;
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>FROSCHLAUT</h1>
-    <p>Offizielle Website der Rockband</p>
-  </header>
 
-  <nav>
-    <a href="#fotos">Fotos</a>
-    <a href="#musik">Musik</a>
-  </nav>
+<header>
+  <h1>FROSCHLAUT</h1>
+  <p>Rock aus Leidenschaft</p>
+</header>
 
-  <section id="fotos">
-    <h2>Fotos</h2>
-    <div class="gallery">
-      <img src="img/HalloZusammen.png" alt="Bandfoto FROSCHLAUT">
-    </div>
-  </section>
+<nav>
+  <a href="#fotos">Fotos</a>
+  <a href="#musik">Musik</a>
+</nav>
 
-  <section id="musik">
-    <h2>Musik</h2>
+<section id="fotos">
+  <h2>Fotos</h2>
+  <div class="gallery">
+    <img src="img/HalloZusammen.png" alt="Bandfoto">
+  </div>
+</section>
 
-    <p>Hört unser neues Lied "Hallo zusammen"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Hallo zusammen.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<section id="musik">
+<h2>Musik</h2>
 
-    <p>Und hier unser Song "Die Schattenseele"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Die Schattenseele.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="music-list">
 
-    <p>Und unser Lied "Lacheln"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Lacheln.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<!-- 14 TRACKS -->
+<div class="player"><div class="track-title">Hallo zusammen</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Hallo zusammen.mp3"></audio></div>
 
-    <p>Und neu: "Licht in der Ferne"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Licht in der Ferne.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Die Schattenseele</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Die Schattenseele.mp3"></audio></div>
 
-    <p>Und neu: "Denk mit dem Kopf"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Denk mit dem Kopf.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Lacheln</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Lacheln.mp3"></audio></div>
 
-    <p>Und unser neuer Song "ToBeOrNotToBe"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - ToBeOrNotToBe.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Licht in der Ferne</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Licht in der Ferne.mp3"></audio></div>
 
-    <p>Ganz frisch: "Zitrone und Mut"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Zitrone und Mut.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Denk mit dem Kopf</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Denk mit dem Kopf.mp3"></audio></div>
 
-    <p>Und unser neuester Song "Akuna Matata"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Akuna Matata.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">ToBeOrNotToBe</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - ToBeOrNotToBe.mp3"></audio></div>
 
-    <p>Neu: "Dunkler Pakt"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - DunklerPakt.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Zitrone und Mut</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Zitrone und Mut.mp3"></audio></div>
 
-    <p>Neu: "Genemange Passigues"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - GenemangePassigues.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Akuna Matata</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Akuna Matata.mp3"></audio></div>
 
-    <p>Neu: "Wieder"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Wieder.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Dunkler Pakt</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - DunklerPakt.mp3"></audio></div>
 
-    <p>Neu: "NeuDi"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - NeuDi.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Genemange Passigues</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - GenemangePassigues.mp3"></audio></div>
 
-    <p>Neu: "WieKind"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - WieKind.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">Wieder</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Wieder.mp3"></audio></div>
 
-    <p>Neu: "Juckt mich nicht"</p>
-    <audio controls controlsList="nodownload">
-      <source src="music/FROSCHLAUT - Juckt mich nicht.mp3" type="audio/mpeg">
-      Dein Browser unterstützt das Audio-Element nicht.
-    </audio>
+<div class="player"><div class="track-title">NeuDi</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - NeuDi.mp3"></audio></div>
 
-  </section>
+<div class="player"><div class="track-title">WieKind</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - WieKind.mp3"></audio></div>
 
-  <footer>
-    <p>&copy; 2025 FROSCHLAUT – Rock aus Leidenschaft</p>
-  </footer>
+<div class="player"><div class="track-title">Juckt mich nicht</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Juckt mich nicht.mp3"></audio></div>
 
-  <script>
-    const audios = document.querySelectorAll('#musik audio');
-    audios.forEach(audio => {
-      audio.addEventListener('play', () => {
-        audios.forEach(a => {
-          if(a !== audio) a.pause();
-        });
-      });
-    });
-  </script>
+</div>
+</section>
+
+<footer>
+  <p>&copy; 2025 FROSCHLAUT - Rock aus Leidenschaft - Alle Rechte vorbehalten</p>
+</footer>
+
+<script>
+const players = document.querySelectorAll(".player");
+let currentAudio = null;
+
+players.forEach(player => {
+  const audio = player.querySelector("audio");
+  const btn = player.querySelector(".play-btn");
+  const bar = player.querySelector(".progress-bar");
+  const progress = player.querySelector(".progress");
+  const volume = player.querySelector(".volume");
+
+  audio.volume = 0.8;
+
+  btn.onclick = () => {
+    if(currentAudio && currentAudio !== audio){
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
+    if(audio.paused){
+      audio.play();
+      btn.textContent = "Pause";
+      currentAudio = audio;
+    } else {
+      audio.pause();
+      btn.textContent = "Play";
+    }
+  };
+
+  audio.ontimeupdate = () => {
+    bar.style.width = (audio.currentTime / audio.duration) * 100 + "%";
+  };
+
+  progress.onclick = (e) => {
+    const rect = progress.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  };
+
+  volume.addEventListener("input", () => {
+    let v = parseFloat(volume.value);
+    if (isNaN(v)) v = 0.8;
+    audio.volume = v;
+  });
+});
+</script>
+
 </body>
 </html>
