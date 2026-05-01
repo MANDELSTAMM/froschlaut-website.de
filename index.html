@@ -79,14 +79,24 @@ h2 {
   margin-bottom: 10px;
 }
 
+/* TEXT COLORS */
 .track-title {
-  width: 220px;
+  width: 260px;
   text-align: left;
   font-size: 13px;
-  color: #0f0;
-  text-transform: uppercase;
 }
 
+.artist {
+  color: #0f0;
+  font-weight: bold;
+}
+
+.song {
+  color: #fff;
+  opacity: 0.9;
+}
+
+/* BUTTON */
 .play-btn {
   background: transparent;
   border: 1px solid #0f0;
@@ -100,7 +110,7 @@ h2 {
   color: #000;
 }
 
-/* PINK PROGRESS */
+/* PROGRESS */
 .progress {
   flex: 1;
   height: 8px;
@@ -113,7 +123,6 @@ h2 {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #ff4fd8, #ff00aa);
-  box-shadow: 0 0 10px rgba(255, 0, 170, 0.6);
 }
 
 /* VOLUME */
@@ -159,40 +168,137 @@ footer {
 
 <div class="music-list">
 
-<!-- 14 TRACKS -->
-<div class="player"><div class="track-title">Hallo zusammen</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Hallo zusammen.mp3"></audio></div>
+<!-- 1 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Hallo zusammen</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Hallo zusammen.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Die Schattenseele</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Die Schattenseele.mp3"></audio></div>
+<!-- 2 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Die Schattenseele</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Die Schattenseele.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Lacheln</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Lacheln.mp3"></audio></div>
+<!-- 3 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Lacheln</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Lacheln.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Licht in der Ferne</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Licht in der Ferne.mp3"></audio></div>
+<!-- 4 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Licht in der Ferne</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Licht in der Ferne.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Denk mit dem Kopf</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Denk mit dem Kopf.mp3"></audio></div>
+<!-- 5 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Denk mit dem Kopf</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Denk mit dem Kopf.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">ToBeOrNotToBe</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - ToBeOrNotToBe.mp3"></audio></div>
+<!-- 6 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">ToBeOrNotToBe</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - ToBeOrNotToBe.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Zitrone und Mut</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Zitrone und Mut.mp3"></audio></div>
+<!-- 7 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Zitrone und Mut</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Zitrone und Mut.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Akuna Matata</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Akuna Matata.mp3"></audio></div>
+<!-- 8 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Akuna Matata</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Akuna Matata.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Dunkler Pakt</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - DunklerPakt.mp3"></audio></div>
+<!-- 9 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Dunkler Pakt</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - DunklerPakt.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Genemange Passigues</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - GenemangePassigues.mp3"></audio></div>
+<!-- 10 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Genemange Passigues</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - GenemangePassigues.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Wieder</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Wieder.mp3"></audio></div>
+<!-- 11 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Wieder</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Wieder.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">NeuDi</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - NeuDi.mp3"></audio></div>
+<!-- 12 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">NeuDi</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - NeuDi.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">WieKind</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - WieKind.mp3"></audio></div>
+<!-- 13 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">WieKind</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - WieKind.mp3"></audio>
+</div>
 
-<div class="player"><div class="track-title">Juckt mich nicht</div><button class="play-btn">Play</button><div class="progress"><div class="progress-bar"></div></div><input class="volume" type="range" min="0" max="1" step="0.01" value="0.8"><audio src="music/FROSCHLAUT - Juckt mich nicht.mp3"></audio></div>
+<!-- 14 -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Juckt mich nicht</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Juckt mich nicht.mp3"></audio>
+</div>
 
 </div>
 </section>
 
 <footer>
-  <p>&copy; 2025 FROSCHLAUT - Rock aus Leidenschaft - Alle Rechte vorbehalten</p>
+  <p>&copy; 2026 FROSCHLAUT - Rock aus Leidenschaft - Alle Rechte vorbehalten</p>
 </footer>
 
 <script>
