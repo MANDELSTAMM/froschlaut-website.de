@@ -23,6 +23,55 @@ header h1 {
   font-size: 3em;
   color: #0f0;
   text-shadow: 0 0 15px #0f0;
+  position: relative;
+  display: inline-block;
+  animation: glitchBase 3s infinite;
+}
+
+@keyframes glitchBase {
+  0%, 100% { transform: translate(0,0); }
+  20% { transform: translate(1px,-1px); }
+  40% { transform: translate(-1px,1px); }
+  60% { transform: translate(1px,1px); }
+  80% { transform: translate(-1px,-1px); }
+}
+
+header h1::before,
+header h1::after {
+  content: "FROSCHLAUT";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+header h1::before {
+  color: #ff00ff;
+  left: 2px;
+  animation: glitch1 2s infinite linear alternate-reverse;
+}
+
+header h1::after {
+  color: #00ffff;
+  left: -2px;
+  animation: glitch2 1.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch1 {
+  0% { clip-path: inset(0 0 90% 0); transform: translate(-2px,1px); }
+  25% { clip-path: inset(20% 0 60% 0); }
+  50% { clip-path: inset(40% 0 40% 0); }
+  75% { clip-path: inset(60% 0 20% 0); }
+  100% { clip-path: inset(80% 0 0 0); transform: translate(2px,-1px); }
+}
+
+@keyframes glitch2 {
+  0% { clip-path: inset(80% 0 0 0); transform: translate(2px,-1px); }
+  25% { clip-path: inset(60% 0 20% 0); }
+  50% { clip-path: inset(40% 0 40% 0); }
+  75% { clip-path: inset(20% 0 60% 0); }
+  100% { clip-path: inset(0 0 90% 0); transform: translate(-2px,1px); }
 }
 
 nav {
@@ -74,7 +123,6 @@ h2 {
   transition: 0.2s;
 }
 
-/* 🔥 ACTIVE (ADDED ONLY) */
 .player.active {
   border: 1px solid #0f0;
   box-shadow: 0 0 20px rgba(0,255,0,0.4);
@@ -329,7 +377,6 @@ players.forEach((player, index) => {
       currentAudio = audio;
       currentPlayer = player;
 
-      // 🔥 AUTO NEXT
       audio.onended = () => {
         const next = players[index + 1];
         if(next){
