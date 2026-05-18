@@ -29,11 +29,14 @@ header h1 {
 }
 
 @keyframes glitchBase {
-  0%, 100% { transform: translate(0,0); }
-  20% { transform: translate(1px,-1px); }
-  40% { transform: translate(-1px,1px); }
-  60% { transform: translate(1px,1px); }
-  80% { transform: translate(-1px,-1px); }
+  0%, 92%, 100% { transform: translate(0,0); }
+  93% { transform: translate(2px,-1px); }
+  94% { transform: translate(-2px,1px); }
+  95% { transform: translate(1px,1px); }
+  96% { transform: translate(-1px,-1px); }
+  97% { transform: translate(2px,0px); }
+  98% { transform: translate(0px,-2px); }
+  99% { transform: translate(-2px,0px); }
 }
 
 header h1::before,
