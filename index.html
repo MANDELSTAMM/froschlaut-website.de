@@ -21,58 +21,54 @@ header {
 header h1 {
   margin: 0;
   font-size: 3em;
-  color: #0f0;
-  text-shadow: 0 0 15px #0f0;
+  font-weight: 700;
+
   position: relative;
   display: inline-block;
+  animation: glitchBase 3s infinite;
 
-  /* GLITCH HERE (RARE) */
-  animation: glitchBase 8s infinite;
+  color: #39ff14;
+
+  text-shadow:
+    0 0 3px #39ff14,
+    0 0 8px #39ff14;
 }
 
-/* MAIN RARE GLITCH */
-@keyframes glitchBase {
-  0%, 94%, 100% { transform: translate(0,0); }
-  95% { transform: translate(2px,-1px); }
-  96% { transform: translate(-2px,1px); }
-  97% { transform: translate(1px,0px); }
-  98% { transform: translate(0px,-1px); }
-  99% { transform: translate(-1px,0px); }
-}
-
-/* VERY RARE COLOR SHIFT (LOW INTENSITY) */
 header h1::before,
 header h1::after {
   content: "FROSCHLAUT";
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
   opacity: 0;
   pointer-events: none;
 }
 
-/* PURPLE (very rare) */
 header h1::before {
   color: #ff00ff;
-  transform: translate(1px, 0);
-  animation: glitchFlash 8s infinite;
+  transform: translate(2px, 0);
+  animation: glitchFlash 5s infinite;
 }
 
-/* CYAN (very rare) */
 header h1::after {
   color: #00ffff;
-  transform: translate(-1px, 0);
-  animation: glitchFlash 8s infinite;
+  transform: translate(-2px, 0);
+  animation: glitchFlash 9s infinite;
 }
 
-/* FLASH CONTROL */
+@keyframes glitchBase {
+  0%, 93%, 100% { transform: translate(0,0); }
+  94% { transform: translate(1px,-1px); }
+  95% { transform: translate(-1px,1px); }
+  96% { transform: translate(1px,1px); }
+  97% { transform: translate(-1px,-1px); }
+}
+
 @keyframes glitchFlash {
-  0%, 93%, 100% { opacity: 0; }
-  94% { opacity: 1; }
-  95% { opacity: 0; }
-  96% { opacity: 1; }
-  97% { opacity: 0; }
+  0%, 94%, 100% { opacity: 0; }
+  95% { opacity: 1; }
+  96% { opacity: 0; }
+  97% { opacity: 1; }
 }
 
 nav {
@@ -215,7 +211,125 @@ footer {
 
 <div class="music-list">
 
-<!-- (твои треки НЕ ТРОГАЛ) -->
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Hallo zusammen</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Hallo zusammen.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Sterne</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Sterne.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Die Schattenseele</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Die Schattenseele.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Lacheln</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Lacheln.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Licht in der Ferne</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Licht in der Ferne.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Denk mit dem Kopf</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Denk mit dem Kopf.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">ToBeOrNotToBe</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - ToBeOrNotToBe.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Zitrone und Mut</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Zitrone und Mut.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Akuna Matata</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Akuna Matata.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Dunkler Pakt</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - DunklerPakt.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Genemange Passigues</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - GenemangePassigues.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Wieder</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Wieder.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">NeuDi</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - NeuDi.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">WieKind</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - WieKind.mp3"></audio>
+</div>
+
+<div class="player">
+  <div class="track-title"><span class="artist">FROSCHLAUT</span> - <span class="song">Juckt mich nicht</span></div>
+  <button class="play-btn">Play</button>
+  <div class="progress"><div class="progress-bar"></div></div>
+  <input class="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+  <audio src="music/FROSCHLAUT - Juckt mich nicht.mp3"></audio>
+</div>
 
 </div>
 </section>
@@ -225,7 +339,74 @@ footer {
 </footer>
 
 <script>
-// (твой JS НЕ ТРОГАЛ)
+const players = document.querySelectorAll(".player");
+
+let currentAudio = null;
+let currentPlayer = null;
+
+players.forEach((player, index) => {
+
+  const audio = player.querySelector("audio");
+  const btn = player.querySelector(".play-btn");
+  const bar = player.querySelector(".progress-bar");
+  const progress = player.querySelector(".progress");
+  const volume = player.querySelector(".volume");
+
+  audio.volume = 0.8;
+
+  btn.onclick = () => {
+
+    if(currentAudio && currentAudio !== audio){
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+
+      if(currentPlayer){
+        currentPlayer.classList.remove("active");
+        currentPlayer.querySelector(".play-btn").textContent = "Play";
+      }
+    }
+
+    if(audio.paused){
+      audio.play();
+      btn.textContent = "Pause";
+
+      player.classList.add("active");
+
+      currentAudio = audio;
+      currentPlayer = player;
+
+      // 🔥 AUTO NEXT
+      audio.onended = () => {
+        const next = players[index + 1];
+        if(next){
+          next.querySelector(".play-btn").click();
+        }
+      };
+
+    } else {
+      audio.pause();
+      btn.textContent = "Play";
+      player.classList.remove("active");
+    }
+  };
+
+  audio.ontimeupdate = () => {
+    if(!audio.duration) return;
+    bar.style.width = (audio.currentTime / audio.duration) * 100 + "%";
+  };
+
+  progress.onclick = (e) => {
+    const rect = progress.getBoundingClientRect();
+    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+  };
+
+  volume.addEventListener("input", () => {
+    let v = parseFloat(volume.value);
+    if (isNaN(v)) v = 0.8;
+    audio.volume = v;
+  });
+
+});
 </script>
 
 </body>
