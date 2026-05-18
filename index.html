@@ -54,13 +54,19 @@ h2 {
 
 .gallery img {
   display: block;
-  max-width: 100%;
   width: 100%;
+  max-width: 650px;
   max-height: 60vh;
   object-fit: contain;
 
-  border: 2px solid #0f0;
+  border: 6px solid #0f0;
+  border-radius: 12px;
+
   margin: 15px auto;
+
+  box-shadow:
+    0 0 0 2px #000,         /* Schwarz */
+    0 0 25px rgba(0,255,0,0.35); /* Grune licht */
 }
 
 .music-list {
